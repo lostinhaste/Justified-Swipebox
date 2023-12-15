@@ -1,0 +1,22 @@
+{{/* If a thumbnail was provided use it, if not, use the photo */}}
+{{ $thumbPhoto :=  "" }}
+{{ if eq (len (.Get "thumbnail")) 0 }}
+    {{ $thumbPhoto = .Get "photo" }}
+{{ else }}
+    {{ $thumbPhoto = .Get "thumbnail" }}
+{{ end }}
+
+<a class="swipebox" href="{{ .Get "photo" }}"
+    {{ if .Get "title" }}
+        title="{{ .Get "title" }}" 
+    {{ end }}
+    {{ if .Get "gallery" }}
+        rel="{{ .Get "gallery" }}" 
+    {{ end }} 
+>
+    <img 
+    {{ if .Get "alt" }}
+        alt="{{ .Get "alt" }}" 
+    {{ end }} 
+    src="{{ $thumbPhoto }}" />
+</a>

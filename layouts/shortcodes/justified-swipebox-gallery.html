@@ -1,0 +1,35 @@
+{{/* jQuery Selector */}}
+{{ $id :=  .Get "id" }}
+{{ $galleryId := print "#" $id }}
+
+{{/* Variables */}}
+{{ $margin := 3 }}
+{{ if .Get "margin" }}
+  {{ $margin = .Get "margin" }}
+{{ end }}
+
+{{ $showCaptionsOnHover := false }}
+{{ if .Get "showCaptionsOnHover" }}
+  {{ $showCaptionsOnHover = .Get "showCaptionsOnHover" }}
+{{ end }}
+
+<script type="text/javascript">
+
+$(function() {
+    // Set up the Justified Gallery
+    $('{{ $galleryId }}').justifiedGallery({
+      margins: {{ $margin }},
+      captions: {{ $showCaptionsOnHover }}
+      {{ if .Get "rowHeight" }}
+        , rowHeight: {{ .Get "rowHeight" }}
+      {{ end }}
+      {{ if .Get "lastRow" }}
+        , lastRow: {{ .Get "lastRow" }}
+      {{ end }}
+    });
+
+    // Set up Wwipebox
+    $('.swipebox').swipebox();
+});
+
+</script>
