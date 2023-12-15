@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "title": "Justified Micro.blog Gallery",
-  "description": "An image plugin, providing the ability to create fluid image galleries.",
+  "description": "A gallery image plugin for Micro.blog, providing the ability to create fluid image galleries.",
   "includes": [
     "/js/justified-swipebox/jquery.justifiedGallery.min.js",
     "/css/justified-swipebox/justifiedGallery.min.css",
