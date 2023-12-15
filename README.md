@@ -50,4 +50,4 @@ Below are a list of the various parameters the Plugin can use when generating HT
 
 | Version | Date | Description |
 |---|---|---|
-| 0.0.1 | December 15, 2023 | The initial release of the project. |
+| 1.0.0 | December 15, 2023 | The initial release of the project. |
