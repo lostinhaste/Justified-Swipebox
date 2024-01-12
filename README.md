@@ -1,7 +1,9 @@
 # Justified Swipebox - Hugo Plugin for Micro.blog 🎞️
-Inspired by [GLightbox](https://github.com/jsonbecker/plugin-glightbox), a lovely image Hugo plugin created by [@jsonbecker](https://micro.blog/jsonbecker), Justified Swipebox is a plugin for [Micro.blog](https://micro.blog/) to _easily_ allow the creation of "clickable" image galleries on posts and pages. It depends on the [Justified Gallery](https://github.com/miromannino/Justified-Gallery) to create the initial gallery on the post/page and [Swipebox](https://github.com/brutaldesign/swipebox) to show the image(s) at a larger resolution when an item in the gallery is clicked / touched. This plugin wouldn't exist without either of those projects. 👏🏻
+Inspired by [GLightbox](https://github.com/jsonbecker/plugin-glightbox), a lovely image Hugo plugin created by [@jsonbecker](https://micro.blog/jsonbecker), Justified Swipebox is a plugin for [Micro.blog](https://micro.blog/) to _easily_ allow the creation of "clickable" image galleries on posts and pages. It depends on the [Justified Gallery](https://github.com/miromannino/Justified-Gallery) to create the initial gallery on the post/page and [Swipebox](https://github.com/brutaldesign/swipebox) to show the image(s) at a larger resolution when an item in the gallery is clicked / touched. This plugin wouldn't exist without either of those projects, as it's just combining the two of them to work properly in the Micro.blog plugin system. 👏🏻
 
 ![Main Image for Project](https://raw.githubusercontent.com/lostinhaste/Justified-Swipebox/main/documentation/main-image.png)
+
+_**Note:**_ The markdown preview in the Micro.blog plugin-in system doesn't seem to handle multi-line code blocks _or_ tables. It is advisable view this document on [Github](https://github.com/lostinhaste/Justified-Swipebox/blob/main/README.md) or in a dedicated Markdown viewer.
 
 ## How To Use
 The plugin supplies two shortcodes, one for each image and one to call the required JavaScript (`justified-swipebox-entry` and `justified-swipebox-gallery`); essentially it's one to many `justified-swipebox-entry` shortcodes and `justified-swipebox-gallery` (per gallery).
@@ -22,6 +24,9 @@ The following code...
 ![Example 1](https://raw.githubusercontent.com/lostinhaste/Justified-Swipebox/main/documentation/example-1.png)
 
 Each gallery should be wrapped in a `div` with a class of _"justified-gallery"_. Multiple galleries are possible per page but the _id_ of the holding `div` needs to match the _gallery_ for each `justified-swipebox-entry` shortcode along with the the _id_ `justified-swipebox-gallery` shortcode.
+
+###  Warning! ⚠️
+There appears to be some bug somewhere in the Micro.blog system, preventing this plugin from working properly if extra lines (_carriage returns_, for those of us old enough to remember that term) are contained within the `div`, the plugin will not work properly. Even if there is a line break between the `div` (the one containing the _"justified-gallery"_ class) and the first `justified-swipebox-entry` entry, the plugin might fail.
 
 ## Parameter List / Key
 
@@ -50,4 +55,5 @@ Below are a list of the various parameters the Plugin can use when generating HT
 
 | Version | Date | Description |
 |---|---|---|
+| 1.0.1 | January 12, 2024 | Updating the Read Me file: more credit to the supporting libraries, added a note about viewing the Read Me file, and added a warning about spacing issues. |
 | 1.0.0 | December 15, 2023 | The initial release of the project. |
