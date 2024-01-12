@@ -1,7 +1,7 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "Justified Swipebox - Image Gallery",
-  "description": "A gallery image plugin for Micro.blog, providing the ability to create fluid image galleries.",
+  "description": "A photo gallery image plugin for Micro.blog, providing the ability to create fluid (responsive) image galleries.",
   "includes": [
     "/js/justified-swipebox/jquery.justifiedGallery.min.js",
     "/css/justified-swipebox/justifiedGallery.min.css",
